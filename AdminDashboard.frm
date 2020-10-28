@@ -86,6 +86,9 @@ Begin VB.Form Form02
       Begin VB.Menu mnu_deladmn 
          Caption         =   "All Admins"
       End
+      Begin VB.Menu mnu_QPDel 
+         Caption         =   "Question Paper"
+      End
       Begin VB.Menu mnu_reset 
          Caption         =   "Everything"
       End
@@ -124,7 +127,6 @@ Private Sub Command1_Click()
      
      Case Is > 70:
      grad = "B+"
-     
      Case Is > 60:
      grad = "B"
      

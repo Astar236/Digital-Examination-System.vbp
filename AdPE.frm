@@ -124,6 +124,7 @@ Private Sub Command2_Click()
 End Sub
 
 Private Sub Form_Load()
+'Profile Editing Form for admin
      edited = False
      Label1.Caption = "Admin : " + Form01.Data1.Recordset.Fields("Name")
      Label2.Caption = "ID : " + Form01.Data1.Recordset.Fields("ID")

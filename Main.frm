@@ -22,6 +22,14 @@ Begin VB.Form Form00
    ScaleWidth      =   16455
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command3 
+      Caption         =   "Qp"
+      Height          =   855
+      Left            =   120
+      TabIndex        =   2
+      Top             =   2040
+      Width           =   1575
+   End
    Begin VB.CommandButton Command2 
       Caption         =   "Exit"
       Height          =   855
@@ -52,6 +60,10 @@ Private Sub Command2_Click()
      Unload Me
 End Sub
 
+
+Private Sub Command3_Click()
+    Form03p1.Show
+End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
      Unload Form01

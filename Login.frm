@@ -17,6 +17,22 @@ Begin VB.Form Form01
    MaxButton       =   0   'False
    ScaleHeight     =   7890
    ScaleWidth      =   6615
+   Begin VB.Data Data4 
+      Caption         =   "Data4"
+      Connect         =   "Access"
+      DatabaseName    =   "DataBase.mdb"
+      DefaultCursorType=   0  'DefaultCursor
+      DefaultType     =   2  'UseODBC
+      Exclusive       =   0   'False
+      Height          =   420
+      Left            =   2520
+      Options         =   0
+      ReadOnly        =   0   'False
+      RecordsetType   =   1  'Dynaset
+      RecordSource    =   ""
+      Top             =   7320
+      Width           =   1140
+   End
    Begin VB.CommandButton Command2 
       Caption         =   "Exit"
       Height          =   615
@@ -81,6 +97,7 @@ Begin VB.Form Form01
          Left            =   2400
          PasswordChar    =   "*"
          TabIndex        =   8
+         ToolTipText     =   "Your Password"
          Top             =   2400
          Width           =   2535
       End
@@ -88,6 +105,7 @@ Begin VB.Form Form01
          Height          =   495
          Left            =   2400
          TabIndex        =   7
+         ToolTipText     =   "The ID you receieved from your Admin"
          Top             =   1440
          Width           =   2535
       End
@@ -141,7 +159,7 @@ Begin VB.Form Form01
          Width           =   3255
       End
       Begin VB.Label Label2 
-         Caption         =   "User Name :"
+         Caption         =   "User ID :"
          Height          =   375
          Left            =   360
          TabIndex        =   10
@@ -211,7 +229,7 @@ Private Sub Command1_Click()
           resp = search(Data2)
           If resp = True Then
                i = MsgBox("Welcome Student", vbOKOnly + vbInformation, "Success!!!")
-               'Form04.Show
+               Form03.Show
                Form01.Hide
                clear
           End If
@@ -219,7 +237,7 @@ Private Sub Command1_Click()
           resp = search(Data3)
           If resp = True Then
                i = MsgBox("Welcome Faculty", vbOKOnly + vbInformation, "Success!!!")
-               'Form06.Show
+               Form04.Show
                Form01.Hide
                clear
           End If
@@ -263,5 +281,6 @@ Function search(db As Data) As Boolean  'Searches for a record and returns true 
      If i = vbCancel Then
           Call clear
      End If
+     
 End Function
 
