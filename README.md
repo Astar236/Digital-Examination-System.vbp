@@ -66,6 +66,8 @@ This project was developed as part of the TYBBA-CA curriculum under **Savitribai
 ### ✅ Examination Completed
 ![Exam Completed](images/exam_completed.png)
 
+### 🗃️ Student Report
+![Final Report](images/Report.png)
 ---
 
 ## ✅ Advantages
